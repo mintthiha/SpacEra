@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="../styles/darkmode.css" id="mode">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <script src="../styles/mode.js" defer></script>
+    <script src="slider.js" defer></script>
+        <header>
+            <i class="material-icons" id="toggleDark">light_mode</i>
+            <h1><a href="../index.html">SpacEra</a></h1>
+            <img id="logo" src="../media/logo.png" alt="Logo image">
+            <nav>
+                <ol id="header-list">
+                    <li><a href="../01_Planets/moon.html">Planets</a></li>
+                    <li><a href="../02_Info/info.html">Information</a></li>
+                    <li><a href="../03_Tickets/ticket.html">Tickets</a></li>
+                    <li class="underline"><a href="../04_Form/form.html">Log In</a></li>
+                </ol>
+            </nav>
+        </header>
+        <main>
+            <h2 id="note">Sign In is absolutely for free!</h2>
+            <form id="forget-form" method="POST" action="submit.html">
+                <div>
+                    <label for="name">What is your Name?</label>
+                    <input type="text" name="name" id="name" required="required">
+                </div>
+                <div>
+                    <label for="age">What is your age?</label>
+                    <input type="number" name="age" id="age" required="required" min="18">
+                </div>
+                <fieldset>
+                    <legend>Are you from Canada?</legend>
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="yes" name="country" value="yes">
+                    <label for="no">No</label>
+                    <input type="radio" id="no" name="country" value="no">
+                </fieldset>
+                <div id="hidden">
+                    <label for="country">Where are you from?</label>
+                    <input type="text" name="country" id="country">
+                </div>
+                <div id="button-cell">
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Telephone:</th>
+                        <td>+1(234)567-89-10</td>
+                        <th>Instagroom:</th>
+                        <td>&SpacEra</td>
+                    </tr>
+                    <tr>
+                        <th>Wetube:</th>
+                        <td>SpacEra Official</td>
+                        <th>Mail Us:</th>
+                        <td>SpacEra@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Sponsored by Instagroom</h3>
+        </footer>
+</body>
+</html>

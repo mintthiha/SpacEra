@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Calculator</title>
+    <link rel="stylesheet" href="ticket.css">
+    <link rel="stylesheet" href="../styles/darkmode.css" id="mode">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <script src="../styles/mode.js" defer></script>
+    <script src="calculator.js" defer></script>
+        <header>
+            <i class="material-icons" id="toggleDark">light_mode</i>
+            <h1><a href="../index.html">SpacEra</a></h1>
+            <img id="logo" src="../media/logo.png" alt="Logo image">
+            <nav>
+                <ol id="header-list">
+                    <li><a href="../01_Planets/moon.html">Planets</a></li>
+                    <li><a href="../02_Info/info.html">Information</a></li>
+                    <li class="underline">Tickets</li>
+                    <li><a href="../04_Form/form.html">Log In</a></li>
+                </ol>
+            </nav>
+        </header>
+        <main>
+            <section class="right-section">
+                <h2>Price Calculator</h2>
+                <form id="forget-form">
+                    <div class="cell">
+                    <label for="start-planet">Start Planet</label>
+                    <select name="start-planet" id="start-planet">
+                        <option value="">Choose a planet</option>
+                        <option value="Mars">Mars</option>
+                        <option value="Earth">Earth</option>
+                        <option value="Moon">Moon</option>
+                        <option value="Jupiter">Jupiter</option>
+                        </select>
+                    </div>
+                        
+                        <div class="cell">
+                            <label for="end-planet">Destination Planet</label>
+                            <select name="end-planet" id="end-planet">
+                                <option value="">Choose a planet</option>
+                                <option value="Mars">Mars</option>
+                                <option value="Earth">Earth</option>
+                                <option value="Moon">Moon</option>
+                                <option value="Jupiter">Jupiter</option>
+                                </select>
+                            </div>
+                            <div class="cell">
+                                <label for="ticket-amount">How Many Tickets?</label>
+                                <input type="number"  name="ticket-amount" id="ticket-amount" value="1">
+                            </div>
+                            <div class="cell">
+                                <label for="pack">All Inclusive Pack?</label>
+                                <select name="pack" id="pack">
+                                    <option value="">Choose an option</option>
+                                    <option value="yesPack" id="yes">Yes</option>
+                                    <option value="noPack">No</option>
+                                    </select>
+                            </div>
+                        <div class="cell">
+                            <label for="ticket-type">Type of Ticket?</label>
+                            <select name="ticket-type" id="ticket-type">
+                                <option value="Regular">Regular</option>
+                                <option value="Premium">Premium</option>
+                                <option value="Deluxe">Deluxe</option>
+                                </select>
+                        </div>
+                        <div>
+                            <label for="weight">Baggage? (in Kilo)</label>
+                            <input type="number" id="weight" name="weight" value="0">
+                        </div>
+                        <button type="button" id="button" >Calculate</button>
+            
+                </form>
+            </section>
+
+            <section class="left-section">
+                <h2 id="output">Your <span>price</span> will be displayed here!</h2>
+            </section>
+        </main>
+        <footer>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Telephone:</th>
+                        <td>+1(234)567-89-10</td>
+                        <th>Instagroom:</th>
+                        <td>&SpacEra</td>
+                    </tr>
+                    <tr>
+                        <th>Wetube:</th>
+                        <td>SpacEra Official</td>
+                        <th>Mail Us:</th>
+                        <td>SpacEra@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Sponsored by Instagroom</h3>
+        </footer>
+</body>
+</html>

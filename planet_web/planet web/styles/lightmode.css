@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+@font-face{
+    src: url(../media/fonts/ngc.ttf);
+    font-family: ngc;
+}
+
+/*This CSS file is a light version of the template (header, navbar, footer, transitions, media query). All the pages are connected to this file*/
+
+body{
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    background-image: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*Header Section**********************************************************************************/
+
+header{
+    margin: 0;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 5% 47.5% 47.5%;
+    grid-template-rows: 100%;
+    align-items: center;
+}
+
+#logo{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 230px;
+    top: 17px;
+    border: 2px solid black;
+    border-bottom: 2px solid white;
+}
+
+#toggleDark{
+    margin-top: 20px;
+    font-size: 50pt;
+    cursor: pointer;
+}
+
+h1{
+    border-bottom: 2px solid black;
+    padding: 0;
+}
+
+/*Navbar Section**********************************************************************************/
+
+header nav{
+    margin:0;
+    width: 100%;
+    height: 75px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    align-self: center;
+    margin-top: 35px;
+}
+
+#header-list{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    counter-set: nav-counter;
+}
+
+#header-list li::before{
+    counter-increment: nav-counter;
+    content: "0"counter(nav-counter);
+    padding-right: 10px;
+    font-family: "ngc", sans-serif;
+}
+
+.underline{
+    border-bottom: 3px solid black;
+}
+
+a, a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+li{
+    font-size: 15pt;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-weight: bold;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+}
+
+li:hover{
+    border-bottom: 3px solid black;
+}
+
+/*Footer**********************************************************************************/
+footer{
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: flex-end;
+    padding-bottom: 15px;
+}
+
+table{
+    height: 100px;
+    width: 100%;
+    border :2px solid black;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+th{
+    padding-left: 20px;
+    padding-right: 10px;
+    width: 30%;
+}
+
+h3{
+    margin: 0;
+    padding-right: 20px;
+    margin-bottom: 30px;
+    border-top: 2px solid black;
+    text-align: right;
+}
+
+/***********************************************************************************/
+/*This section is a bit messy, because it contains small adjustments for the lightmode*/
+
+p{
+    font-weight: 400;
+}
+
+.moon-color, .mars-color, .earth-color, .jupiter-color{
+    font-weight: 400;
+    color: black;
+}
+
+/*The "form" pages light mode settings*/
+button, #forget-form{
+    border: 3px solid black;
+    color: black;
+}
+
+.txt-field input, div input, select{
+    border: 2px solid black;
+    color: black;
+    background-color: transparent;
+}
+
+.txt-field input:valid ~label,
+.txt-field input:focus ~label{
+    background-color: white;
+}
+
+#login{
+    border-bottom: 3px solid black;
+}
+
+@keyframes header-animation {
+    100%{
+        color: black;
+    }
+}
+
+@keyframes span-animation {
+    100%{
+        color: #E61880;
+    }
+}
+
+.txt-field input:valid ~label,
+.txt-field input:focus ~label{
+    color: #E61880;
+    border-left: 1px solid #E61880;
+    border-right: 1px solid #E61880;
+}
+
+.txt-field input:valid,
+.txt-field input:focus
+{
+    border-color: #E61880;
+}
+
+button:hover{
+    border: 2px solid #E61880;
+    color: #E61880;
+}
+
+main form a:hover, span{
+    color: #E61880;
+}
+
+/*Text Transition Section (Connected to the transition.js)*****************************************/
+
+.transitionLeft {
+	opacity: 0;
+	filter: blur(15px);
+	transform: translateX(-100%);
+	transition: all 1.25s;
+	text-align: right;
+}
+
+.showLeft {
+	opacity: 1;
+	transition: all 1.25s;
+	filter: blur(0);
+	transform: translateX(0);
+}
+
+.transitionRight {
+	opacity: 0;
+	filter: blur(15px);
+	transform: translateY(100%);
+	transition: all 1.25s;
+	text-align: left;
+}
+
+.showRight {
+	opacity: 1;
+	transition: all 1.25s;
+	filter: blur(0);
+	transform: translateY(0);
+}
+
+/*Animation of the font color transition. *************************************************************/
+
+main #note{
+    animation: header-animation 2s ease-in-out forwards;
+    color: transparent;
+}
+
+@keyframes header-animation {
+    100%{
+        color: black;
+    }
+}
+
+main span{
+    color: transparent;
+    animation: span-animation 2s ease-in-out forwards;
+}
+
+@keyframes span-animation {
+    100%{
+        color: #E61880;
+    }
+}
+
+/*The responisve properties for the small monitors: 11inch max***********************************************************************************************/
+@media only screen and (max-width: 1450px){
+
+body{
+     min-width: 945px;
+}
+
+header{
+    grid-template-columns: 4% 30% 66%;
+}
+
+#toggleDark{
+    font-size: 30pt;
+}
+
+#main-list{
+    width: 100%;
+}
+
+video{
+    width: 400px;
+}
+
+main div figure {
+    width: 400px;
+}
+
+p{
+    width: 100%;
+}
+
+dl{
+    width: 100%;
+    grid-template-columns: 2fr 1fr;
+}
+
+footer{
+    grid-template-columns: 65% 35%;
+}
+
+#footer-section{
+    grid-template-columns: 50% 50%;
+}
+}

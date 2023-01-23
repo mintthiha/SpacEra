@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+@font-face{
+    src: url(../media/fonts/ngc.ttf);
+    font-family: ngc;
+}
+
+/*This CSS file is a dark version of the template (header, navbar, footer, transitions, media query). All the pages are connected to this file*/
+
+body{
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(../media/space.jpg);
+    background-size: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*Header Section***********************************************************************************/
+
+header{
+    margin: 0;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 5% 47.5% 47.5%;
+    grid-template-rows: 100%;
+    align-items: center;
+    position: relative;
+}
+
+#logo{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 230px;
+    top: 19px;
+}
+
+#toggleDark{
+    margin-top: 20px;
+    font-size: 50pt;
+    cursor: pointer;
+}
+
+h1{
+    border-bottom: 1px solid hsl(0 0% 100% / 0.5);
+    padding: 0;
+}
+
+/*Navbar Section**********************************************************************************/
+
+header nav{
+    margin:0;
+    width: 100%;
+    height: 75px;
+    background-color: hsl(0 0% 100% / 0.2);
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    align-self: center;
+    margin-top: 35px;
+}
+
+#header-list{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    counter-set: nav-counter;
+}
+
+#header-list li::before{
+    counter-increment: nav-counter;
+    content: "0"counter(nav-counter);
+    padding-right: 10px;
+    font-family: "ngc", sans-serif;
+}
+
+.underline{
+    border-bottom: 2px solid white;
+}
+
+a, a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+li{
+    font-size: 15pt;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-weight: bold;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+}
+
+li:hover{
+    border-bottom: 2px solid white;
+}
+
+
+/*Footer Section**********************************************************************************/
+footer{
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: flex-end;
+    padding-bottom: 15px;
+}
+table{
+    height: 100px;
+    width: 100%;
+    background-color: hsl(0 0% 100% / 0.1);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+th{
+    width: 25%;
+}
+
+td{
+    width: 25%;
+}
+
+h3{
+    margin: 0;
+    padding-right: 20px;
+    margin-bottom: 30px;
+    border-top: 1px solid hsl(0 0% 100% / 0.5);
+    text-align: right;
+}
+
+/*Text Transition Section (Connected to the transition.js)*****************************************/
+
+.transitionLeft {
+	opacity: 0;
+	filter: blur(15px);
+	transform: translateX(-100%);
+	transition: all 1.25s;
+	text-align: right;
+}
+
+.showLeft {
+	opacity: 1;
+	transition: all 1.25s;
+	filter: blur(0);
+	transform: translateX(0);
+}
+
+.transitionRight {
+	opacity: 0;
+	filter: blur(15px);
+	transform: translateY(100%);
+	transition: all 1.25s;
+	text-align: left;
+}
+
+.showRight {
+	opacity: 1;
+	transition: all 1.25s;
+	filter: blur(0);
+	transform: translateY(0);
+}
+
+/*Animation of the font color transition. *************************************************************/
+/*This technique was taken from this youtube video: https://www.youtube.com/watch?v=YszONjKpgg4&t=541s&ab_channel=WebDevSimplified*/
+
+main #note{
+    animation: header-animation 2s ease-in-out forwards;
+    color: transparent;
+}
+
+@keyframes header-animation {
+    100%{
+        color: white;
+    }
+}
+
+main span{
+    color: transparent;
+    animation: span-animation 2s ease-in-out forwards;
+}
+
+@keyframes span-animation {
+    100%{
+        color: #7be0e4;
+    }
+}
+
+/*The responisve properties for the small monitors: 11inch***********************************************************************************************/
+@media only screen and (max-width: 1450px){
+    
+body{
+    min-width: 945px;
+}
+
+header{
+    grid-template-columns: 4% 30% 66%;
+}
+
+#toggleDark{
+    font-size: 30pt;
+}
+
+#main-list{
+    width: 100%;
+}
+
+video{
+    width: 400px;
+}
+
+main div figure{
+    width: 400px;
+}
+
+p{
+    width: 100%;
+}
+
+dl{
+    width: 100%;
+    grid-template-columns: 2fr 1fr;
+}
+
+footer{
+    grid-template-columns: 65% 35%;
+}
+
+}

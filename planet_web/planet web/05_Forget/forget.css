@@ -1,0 +1,95 @@
+/*This CSS is only for the main section of: forget.html*/
+
+main{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#note{
+    padding-bottom: 30px;
+    font-size: 30pt;
+    text-align: center;
+}
+
+form{
+    width: 750px;
+    height: 75px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 10px;
+    
+}
+
+.txt-field{
+    position: relative;
+    width: 100%;
+    height: 75%;
+}
+
+.txt-field label{
+    padding: 10px;
+    font-size: 18pt;
+    position: absolute;
+    left: 0;
+    bottom: 15%;
+    opacity: 0.5;
+    font-weight: bold;
+    transition: 0.5s;
+    cursor:text;
+}
+
+.txt-field input:valid ~label,
+.txt-field input:focus ~label
+{
+    transform: translateX(10px) translateY(-43px);
+    background-color: black;
+    padding: 0 10px 0 10px;
+    font-size: 1em;
+    opacity: 1;
+    color: #7be0e4;
+    border-left: 1px solid #7be0e4;
+    border-right: 1px solid #7be0e4;
+}
+
+input{
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 25pt;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+}
+
+.txt-field input:valid,
+.txt-field input:focus
+{
+    border-color: #7be0e4;
+}
+
+button{
+    width: 200px;
+    height: 75%;
+    border-radius: 10px;
+    font-size: 1em;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+button:hover{
+    border: 2px solid #7be0e4;
+    color: #7be0e4;
+    
+}

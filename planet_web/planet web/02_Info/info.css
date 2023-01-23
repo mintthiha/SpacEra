@@ -1,0 +1,55 @@
+/*This CSS is only for the main section of: info.html*/
+main {
+    min-width: 900px;
+	height :100%;
+}
+
+main div {
+    height: 85vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+}
+
+audio{
+	border: 3px solid black;
+	border-radius: 15px;
+}
+
+h2 {
+	grid-column: span 2;
+	font-size: 64px;
+	text-align: center;
+}
+
+main p {
+	text-align: center;
+    font-size: 22px;
+	width: 70%;
+}
+
+.transitionLeft{
+	justify-self: right;
+}
+
+.transitionRight{
+	justify-self: left;
+}
+
+main figure {
+	padding: 10px;
+	justify-self: center;
+	border: 3px solid black;
+    width:600px;
+	border-radius: 5px;
+}
+
+img{
+	width: 100%;
+}
+
+figcaption {
+    margin: 20px;
+	text-align: center;
+}
+

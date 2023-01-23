@@ -1,0 +1,82 @@
+/*This CSS is only for the main section of: earth.html, jupiter.html, mars.html, moon.html */
+main{
+    margin: 0;
+    display: flex;
+}
+
+main div{
+    flex: 1;
+}
+
+#content-section{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+video{
+    width: 600px;
+    border-radius: 50%;
+}
+
+#text-section{
+    padding: 30px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#main-list{
+    padding: 0;
+    width: 50%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h2{
+    margin: 0;
+    padding: 0;
+    font-size: 80pt;
+    margin-bottom: 15px;
+}
+
+p{
+    margin-bottom: 50px;
+    font-size: 15pt;
+    width: 60%;
+}
+
+dl{
+    margin: 0;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+dd{
+    margin: 0;
+    padding: 0;
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+.mars-color{
+    color: #d29286;
+}
+
+.moon-color{
+    color: #a0a0a0;
+}
+
+.earth-color{
+    color: #A2D1FF;
+}
+
+.jupiter-color{
+    color: #EBD2A7;
+}
+

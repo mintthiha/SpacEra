@@ -1,0 +1,87 @@
+/*This CSS is only for the main section of: register.html*/
+
+main, section{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width: 750px;
+    height: 500px;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset{
+    width: 90%;
+    height: 50px;
+    align-self: center;
+    border-radius: 10px;
+}
+
+div label{
+    width: 100%;
+    font-size: 14pt;
+    text-align: center;
+    font-weight: bold;
+}
+
+fieldset label{
+    height: 50%;
+    font-size: 20pt;
+    padding: 10px;
+}
+
+#hidden{
+    display: none;
+}
+
+div input{
+    width: 90%;
+    height: 50px;
+    margin-top: 15px;
+    font-size: 15pt;
+    background: black;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#button-cell{
+    grid-column: span 2;
+}
+
+button{
+    width: 200px;
+    height: 75px;
+    border-radius: 50px;
+    font-size: 1em;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+button:hover{
+    border: 2px solid #7be0e4;
+    color: #7be0e4;
+    
+}
