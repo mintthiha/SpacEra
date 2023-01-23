@@ -26,3 +26,5 @@ N.B. : All images are free to use, clicking on their links will direct the user 
 
 The music is taken from YouTube, but the channel "Music Unlimited - No Copyright Music" hints it's royalty free use of it.
 The slide transition is also taken from YouTUbe, from the creator that goes by "Beyond Fireship" more info on this in the transition.js file
+
+This is a duo project done with Dmitriy Kim
